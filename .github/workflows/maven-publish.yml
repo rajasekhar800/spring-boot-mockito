@@ -3,10 +3,16 @@
 
 name: Maven Package
 
-on:
-  release:
-    types: [created]
+ 
 
+on:
+  push:
+    branches:
+      - master  # Change this to your main branch if necessary
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
 jobs:
   build:
 
